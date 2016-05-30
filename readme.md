@@ -1,4 +1,4 @@
-# youtube-duration-format [![Build Status](https://travis-ci.org/nil1511/youtube-time-format.svg?branch=master)](https://travis-ci.org/nil1511/youtube-time-format)
+# youtube-duration-format [![Build Status](https://travis-ci.org/nil1511/youtube-duration-format.svg?branch=master)](https://travis-ci.org/nil1511/youtube-duration-format)
 > Format the duration returned by google youtube data api as human understandable
 
 ## Install
