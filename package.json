@@ -1,0 +1,24 @@
+{
+  "name": "youtube-duration-format",
+  "version": "0.1.0",
+  "description": "Format the duration returned by google youtube data api as human understandable",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "keywords": [
+    "youtube",
+    "duration",
+    "format",
+    "time",
+    "PT"
+  ],
+  "devDependencies": {
+    "ava": "0.0.4"
+  },
+  "author": "Nilesh Suthar <nileshsuthar@live.in>",
+  "license": "MIT"
+}
