@@ -1,6 +1,6 @@
 'use strict';
 
-function parseDuration(PT) {
+function parseDuration(PT, format) {
   var output = [];
   var durationInSec = 0;
   var matches = PT.match(/P(?:(\d*)Y)?(?:(\d*)M)?(?:(\d*)W)?(?:(\d*)D)?T?(?:(\d*)H)?(?:(\d*)M)?(?:(\d*)S)?/i);
@@ -40,7 +40,7 @@ function parseDuration(PT) {
       durationInSec += parseInt(matches[parts[i].pos]) * parts[i].multiplier;
     }
   }
-
+  var totalSec = durationInSec;
   // Hours extraction
   if (durationInSec > 3599) {
     output.push(parseInt(durationInSec / 3600));
@@ -50,8 +50,10 @@ function parseDuration(PT) {
   output.push(('0' + parseInt(durationInSec / 60)).slice(-2));
   // Seconds extraction with leading zero
   output.push(('0' + durationInSec % 60).slice(-2));
-
-  return output.join(':');
+  if (format === undefined)
+    return output.join(':');
+  else if (format === 'sec')
+    return totalSec;
 };
 
-module.exports  = parseDuration;
+module.exports = parseDuration;

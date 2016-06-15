@@ -1,6 +1,6 @@
 {
   "name": "youtube-duration-format",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Format the duration returned by google youtube data api as human understandable",
   "main": "index.js",
   "scripts": {
